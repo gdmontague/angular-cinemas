@@ -1,0 +1,96 @@
+<div id="schedule-page">
+    <div class="schedule-bg" [ngStyle]="{
+        'background-image': 'url(' + movieData.imageURL + ')'
+    }">
+    </div>
+    <div class="container"> 
+        <div class="schedule-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>{{movieData.title}}</h1>
+                </div> 
+                <div class="col-md-12 col-lg-6">
+                    <section id="hours-section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title">Choose a time</div>
+                                <div class="hours-menu">
+                                    <div class="time selected" (click)="chooseTime('3:00 pm')" [ngClass]="{'selected': time === '3:00 pm' }">3:00pm</div>
+                                    <div class="time" (click)="chooseTime('6:00 pm')" [ngClass]="{'selected': time === '6:00 pm' }">6:00pm</div>
+                                    <div class="time" (click)="chooseTime('9:00 pm')" [ngClass]="{'selected': time === '9:00 pm' }">9:00pm</div>
+                                    <div class="time" (click)="chooseTime('11:30 pm')" [ngClass]="{'selected': time === '11:30 pm' }">11:30pm</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="ticket-section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="section-title">How Many Tickets?</div>
+                                <div class="tickets-menu">
+                                    <div class="ticket-selection">
+                                            <div class="column">Adult</div>
+                                            <div class="column"><input type='text' value=1 [(ngModel)]="adultTickets"></div>
+                                            <div class="column"> {{adultTickets}} x ${{adultTicketPrice}}</div>
+                                            <div class="column"> = ${{adultTickets * adultTicketPrice }}</div>
+                                    </div>  
+                                    <div class="ticket-selection ">
+                                            <div class="column">Child</div>
+                                            <div class="column"><input type='text' value=1 [(ngModel)]="childTickets"></div>
+                                            <div class="column"> {{childTickets}} x ${{childTicketPrice}}</div>
+                                            <div class="column"> = ${{childTickets * childTicketPrice }}</div>
+                                        </div>
+                                     <div class="ticket-selection ">
+                                            <div class="column">Senior</div>
+                                            <div class="column"><input type='text' value=1 [(ngModel)]="seniorTickets"></div>
+                                            <div class="column"> {{seniorTickets}} x ${{seniorTicketPrice}}</div>
+                                            <div class="column"> = ${{seniorTickets * seniorTicketPrice}}</div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <section id="chair-section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="chairs-grid" >
+                                    <!-- Chair Row -->
+                                    <ng-container *ngFor="let chair of movieData.chairs; index as i">
+                                        <div class="chair" [ngClass]="{'reserved': chair ==='reserved', 'selected': chair === 'selected'}" (click)="clickedChair(movieData.slug, i)"></div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chairs-legend">
+                            <div class="row">
+                                <div class="icon">
+                                    <div class="selected-box"></div>
+                                    <span class="text">Selected</span>
+                                </div>
+                                <div class="icon">
+                                    <div class="reserved-box"></div>
+                                    <span class="text">Selected</span>
+                                </div>
+                                <div class="icon">
+                                    <div class="open-box"></div>
+                                    <span class="text">Selected</span>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="continue">
+                                <div class="continue-btn"(click)="clickedContinue()">
+                                    Continue
+                                </div>
+                        </div>
+                    </section> 
+                </div>
+            </div>                   
+        </div>
+    </div>
+</div>
+
+
+    

@@ -1,0 +1,86 @@
+<div id="thank-you-page">
+    <div class="thank-you-bg" [ngStyle]="{
+        'background-image': 'url(' + movieData.imageURL + ')'
+    }">
+    </div>
+    <div class=""> 
+        <div class="thank-you-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- https://www.behance.net/gallery/34319771/Movie-Ticket-Checkout -->
+<div class="ticket">
+    <div class="side front">
+      <img src={{movieData.imageURL}}>
+      <div class="info bottom">
+        <h1>{{movieData.title}}</h1>
+        <span class="title address">Angular Cinemas</span>
+        <dl>
+          <dt>Tickets</dt>
+          <dd>{{totalTickets}}</dd>
+          <dt>Date</dt>
+          <dd>8 Mar</dd>
+          <dt>Time</dt>
+          <dd>{{time}}</dd>
+        </dl>
+        <span class="floating price"></span>
+      </div>
+    </div>
+    <div class="side back">
+      <div class="top">
+        <div class="span">
+          <h2>Movie</h2>
+          <span>Captain Marvel</span>
+        </div>
+        <div class="span">
+          <h2>Theater</h2>
+          <span>AMC Loweis, 86th Street</span>
+        </div>
+        <div class="span span8">
+          <h2>Date</h2>
+          <span>8 March,2019</span>
+        </div>
+        <div class="span span4">
+          <h2>Time</h2>
+          <span>18:15</span>
+        </div>
+        <div class="span span8">
+          <h2>Tickets</h2>
+          <span>2</span>
+        </div>
+        <div class="span span4">
+          <h2>Price</h2>
+          <span class="strong">$24.50</span>
+        </div>
+      </div>
+      
+      <div class="payment bottom">
+        <h1>PAYMENT DETAILS</h1>
+        <span class="floating"></span>
+        <div class="row card-num">
+          <input type="text" placeholder="0000" maxlength="4">
+          <input type="text" placeholder="0000" maxlength="4">
+          <input type="text" placeholder="0000" maxlength="4">
+          <input type="text" placeholder="0000" maxlength="4">
+        </div>
+        <div class="row">
+          <div class="span span4">
+            <input type="text" placeholder="MM/YY" maxlength="4">
+          </div>
+          <div class="span span4">
+            <input type="text" placeholder="CVV" maxlength="4"></div>
+          <div class="span span4">
+            <input type="text" placeholder="ZIP" maxlength="4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <p class="msg">Hover on this ticket!! What's going on?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    

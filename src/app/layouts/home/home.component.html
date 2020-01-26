@@ -1,0 +1,17 @@
+
+<div id="movies-list">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let movie of moviesData">
+            <div class="movie-box" [ngStyle]="{
+                'background-image': 'url(' + movie.imageURL + ')'
+            }" (click)="clickedMovie(movie.slug)">
+                <div class="av open">
+                    <div class="status">
+                        Tickets Available
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

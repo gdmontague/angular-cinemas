@@ -1,0 +1,166 @@
+#schedule-page {
+    overflow: hidden; 
+    position: relative;
+    padding: 100px 0;
+   
+ }
+ .schedule-content {
+     background: white;
+     padding: 20px;
+     -webkit-box-shadow: 0px 38px 43px -35px rgba(0,0,0,0.75);
+     -moz-box-shadow: 0px 38px 43px -35px rgba(0,0,0,0.75);
+     box-shadow: 0px 38px 43px -35px rgba(0,0,0,0.75);
+     position: relative;
+     z-index: 2;
+     .schedule-poster {
+         width: 100%;
+         height: 400px;
+         
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+     }
+     .release {
+         margin-bottom: 1rem;
+         color: #a1a1a1;
+     }
+     p {
+         line-height: 1.5rem;
+     }
+ }
+ .schedule-bg {
+     background: url('https://images-na.ssl-images-amazon.com/images/I/61%2B62cKXIVL._AC_SY550_.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     height: 100%;
+     filter: blur(30px);
+     transform: scale(1.2);
+     position: absolute;
+     top: 0;
+     width: 100%;
+ }
+ .section-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+ }
+ #hours-section {
+    margin-bottom: 1rem;  
+     .hours-menu {
+         display: flex;
+         .time {
+             border: 1px solid #1f59ee;
+             margin-right: 10px;
+             padding: 10px;
+             color: #1f59ee;
+             border-radius: 4px;
+             font-weight: 700;
+             font-size: 0.9rem;
+             &:hover, &.selected {
+                background: #1f59ee;
+                border: 1px solid #1f59ee;
+                color: white;
+                cursor: pointer;
+            }
+         }
+     }
+ }
+ #ticket-section {
+     margin-bottom: 1rem;
+     .ticket-selection {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         .column {
+             margin-right: 10px !important;
+             &:nth-child(1) {
+                 width: 40px;
+             }
+         }
+         input {
+             margin: 0 10px;
+             width: 50px;
+             text-align: center;
+         }
+     }
+ }
+ #chair-section {
+     background: #1f59ee;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 100px 0;
+     flex-direction: column;
+ }
+ .chairs-grid {
+     display: grid;
+     grid-template-columns: repeat(9, 30px);
+     grid-template-rows: repeat(5, 30px);
+     grid-gap: 10px;
+     background: #1f59ee;
+     .chair {
+        //  height: 40px;
+        //  width: 40px;
+         border: 1px solid #7c9df5;
+         border-radius: 5px;
+         &.selected, &:hover {
+             background: #fc6917;
+             border: 1px solid #fc6917;
+             cursor: pointer;
+         }
+         &.reserved {
+             background: #628bf3;
+             &:hover {
+                border: 1px solid #628bf3;
+             }
+         }
+     }
+ }
+ .chairs-legend {
+     display: flex;
+     padding: 50px;
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+    }
+     .selected-box {
+         background: #fc6917;
+         height: 15px;
+         width: 15px;
+         border-radius: 3px; 
+         margin-right: 10px;
+     }
+     .reserved-box {
+        background: #628bf3;
+        height: 15px;
+        width: 15px;
+        border-radius: 3px; 
+        margin-right: 10px;
+    }
+    .open-box {
+        border: 1px solid #628bf3;;
+        height: 15px;
+        width: 15px;
+        border-radius: 3px; 
+        margin-right: 10px;
+    }
+     span {
+        color: white;
+     }
+ }
+ .continue {
+     .continue-btn {
+         background: white;
+         color: #1f59ee;
+         padding: 10px 30px;
+         border-radius: 4px;
+         &:hover {
+            background: #fc6917;
+            cursor: pointer;
+            color: white;
+         }
+     }
+ }
